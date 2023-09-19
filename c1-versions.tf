@@ -14,8 +14,9 @@ terraform {
 # Provider Block
 provider "aws" {
   region  = var.aws_region
+  profile = "source"
   assume_role {
-    role_arn     = "arn:aws:iam::728878640057:role/Jenkins"
+    role_arn = "arn:aws:iam::728878640057:role/Jenkins"
   }
 }
 /*

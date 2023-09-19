@@ -14,10 +14,8 @@ terraform {
 # Provider Block
 provider "aws" {
   region  = var.aws_region
-  profile = "source"
-  assume_role {
-    role_arn = "arn:aws:iam::728878640057:role/Jenkins"
-  }
+  access_key = "AKIA2TNENNO4RS3I7HWS"
+  secret_key = "N8qsbn/5WsMxrKv/oexagoHZ5+v/fXVQsrgrM3Y8"
 }
 /*
 Note-1:  AWS Credentials Profile (profile = "default") configured on your local desktop terminal  

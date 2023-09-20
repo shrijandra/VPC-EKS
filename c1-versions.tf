@@ -12,7 +12,7 @@ terraform {
 
   backend "s3" {
     bucket = "terraform-on-aws-eks5"
-    key    = "dev/app1k8s/terraform.tfstate"
+    key    = "dev/app1k8s"
     region = "us-east-1" 
 
     # For State Locking

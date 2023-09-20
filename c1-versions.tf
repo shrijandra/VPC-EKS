@@ -9,13 +9,23 @@ terraform {
       version = ">= 4.65"
     }
   }
+
+  backend "s3" {
+    bucket = "terraform-on-aws-eks5"
+    key    = "dev/app1k8s/terraform.tfstate"
+    region = "us-east-1" 
+
+    # For State Locking
+    dynamodb_table = "dev-app1k8s"    
+  }     
 }
 
 # Provider Block
 provider "aws" {
   region  = var.aws_region
-  access_key =
+  #access_key =
 }
+
 /*
 Note-1:  AWS Credentials Profile (profile = "default") configured on your local desktop terminal  
 $HOME/.aws/credentials
